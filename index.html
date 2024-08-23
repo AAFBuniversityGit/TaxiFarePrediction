@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+    <img src="assets/images/header.webp" alt="TaxiFarePrediction">
+</header>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxiFarePrediction</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TaxiFarePrediction</h1>
+        <p>Predicting Taxi Fares with ML.NET</p>
+    </header>
+
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>
+            The TaxiFarePrediction project leverages machine learning to predict taxi fares based on features like
+            vendor ID, rate code, passenger count, trip distance, and payment type. This model is built using ML.NET and
+            trained on historical taxi trip data.
+        </p>
+
+        <h2>How the Program Works</h2>
+        <p>
+            This project involves three main steps:
+        </p>
+
+        <ul>
+            <li><strong>Training the Model:</strong> A regression model is trained using a dataset of historical taxi
+                trip data, which includes features such as trip distance and passenger count.</li>
+            <li><strong>Evaluating the Model:</strong> The model's performance is evaluated on test data, with metrics
+                such as RSquared and Root Mean Squared Error used to assess its accuracy.</li>
+            <li><strong>Making Predictions:</strong> The trained model is used to predict the fare for new taxi trips
+                based on the same set of features.</li>
+        </ul>
+
+        <h2>Detailed Code Explanation</h2>
+        <h3>1. Data Loading and Transformation</h3>
+        <p>
+            The data is loaded from CSV files containing historical taxi trip data. The key features include
+            <strong>Vendor ID</strong>, <strong>Rate Code</strong>, <strong>Passenger Count</strong>, <strong>Trip
+                Distance</strong>, and <strong>Payment Type</strong>.
+        </p>
+        <h3>2. Model Training</h3>
+        <p>
+            The model is trained using the FastTree algorithm, a decision tree-based method suitable for regression
+            tasks. The features are transformed using one-hot encoding for categorical variables, and then combined into
+            a single feature vector.
+        </p>
+        <h3>3. Model Evaluation</h3>
+        <p>
+            After training, the model is evaluated using test data. Key metrics include <strong>RSquared</strong>, which
+            indicates how well the model explains the variance in the data, and <strong>Root Mean Squared
+                Error</strong>, which measures the average prediction error.
+        </p>
+        <h3>4. Predicting Taxi Fares</h3>
+        <p>
+            The model is then used to predict the fare for a single taxi trip. The predicted fare is compared with the
+            actual fare to assess the model's accuracy.
+        </p>
+
+        <h2>Future Improvements</h2>
+        <p>
+            Potential enhancements include:
+        </p>
+        <ul>
+            <li>Incorporating additional features such as traffic data, weather conditions, and time of day.</li>
+            <li>Experimenting with different machine learning algorithms to improve prediction accuracy.</li>
+            <li>Deploying the model as a web service for real-time fare predictions.</li>
+        </ul>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TaxiFarePrediction. Built with ML.NET and GitHub Pages.</p>
+    </footer>
+
+</body>
+
+</html>
